@@ -1,3 +1,5 @@
+
+
 export const getEvents = () => {
     return fetch("http://localhost:8000/events",{
         headers: {
@@ -8,3 +10,21 @@ export const getEvents = () => {
 
 
 }
+export const createEvent = (event) => {
+    return fetch("http://localhost:8000/events", {
+        method: "POST" ,
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Token ${localStorage.getItem("lu_token")}`
+        },
+        body: JSON.stringify(event)
+
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to create event")
+            }
+            return response.json()
+        })
+}
+

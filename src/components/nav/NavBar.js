@@ -10,8 +10,10 @@ export const NavBar = () => {
             }}>
                 Events
             </li>
-            <li className="navbar__item">
-                Navigation link
+            <li className="navbar__item" onClick={()=>{
+                navigate('/games')
+            }}>
+                Games
             </li>
             <li className="navbar__item">
                 Navigation link
