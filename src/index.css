@@ -3,7 +3,8 @@
 --------------------------------------------------------------*/
 
 body, button, input, select, textarea {
-    color: #404040;
+	background-color: #e7ec4e;
+    color: #0f9b1b;
     font-family: "Comfortaa", Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
