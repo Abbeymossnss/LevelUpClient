@@ -7,12 +7,12 @@ import { createEvent } from "../../managers/EventManager"
 export const EventForm = () => {
     const navigate = useNavigate()
     const [eventGame, setEventGame] = useState([])
-    // const [eventGameType, setEventGameType] = useState( [])
+
     
     const [currentEvent, setCurrentEvent] = useState({
         date: "",
         game: 0,
-        game_type: 0
+
         
     })
 
@@ -71,19 +71,10 @@ export const EventForm = () => {
         onClick={evt => {
             evt.preventDefault()
 
-            let currentGameType= 0
-
-            for (const game of eventGame) {
-                if (game.id === parseInt(currentEvent.game))
-                {currentGameType=(game.game_type)
-                }
-                
-            }
             const event = {
                 date: currentEvent.date,
-                game: currentEvent.game,
-                game_type: currentGameType
-                
+                game: parseInt(currentEvent.game)
+
             }
             createEvent(event)
             .then(() => navigate("/events"))
