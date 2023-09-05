@@ -25,7 +25,7 @@ export const EventList = (props) => {
                             <div className="organizer">Organized By: {event.organizer.full_name}</div>
                             <div className="attendees">Gamers Attending This Event: {event.attendees.full_name}</div>
                             <div className="game">Game: {event.game.title}</div>
-                            <div className= "game_type">Type of Game: {event.game_type.label}</div>
+                            <div className= "game_type">Type of Game: {event.game.game_type.label}</div>
                             
                         </section>
 
